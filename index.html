@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>JOMC 586 | Project 4</title>
+    
+    
+    <!----------------VIEWPORT------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <!----------------PERSONAL STYLES------------------->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    
+    <!----------------BOOTSTRAP ISH------------------->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+       
+</head>
+
+<body>
+
+    <div class="container fluid" id="header">
+        <div class="row">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">Information</a></li>
+                <li><a href="#social">Social</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="containter-fluid">
+        <div class="row">
+            <div class="col-md-12" id="home">
+                <img src="img/gc-full.jpg" alt="grand canyon" height="100%" width="100%">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="info">
+                Grand Canyon Info/History
+            </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12" id="social">
+                <iframe class="twitter-iframe" src="twitter/index.php"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <!-------INSTAGRAM------->
+            <div class="col-md-6 col-sm-12">
+                <div class="instagram-content">
+                    <div class="instagram-header">
+                        
+                    </div>
+                    <div id="instagram"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <p>Map info</p>
+                <div id="map"></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+<!-----------------JAVASCRIPT----------------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnb5b2isasf169WVP67DDT6kdGZlRuMg
+        &libraries=visualization&callback=initMap">
+    </script>
+<script src="js/googlemap.js" type="text/javascript"></script>
+<script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+<script src="js/instagram.js" type="text/javascript"></script>
+
+</body>
+</html>
