@@ -38,23 +38,24 @@ $(function() {
 						insta += '<div class="instagram-loop">'
 						//
 						////row
-						insta += '<div class="row row-nomargin">'
+						insta += '<div class="row">'
 						//
-						////user information
-						insta += '<div class="col-md-12 col-xs-2 col2insta">'
-						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
-						insta += '<img width="40px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
-						insta += '<br></a></div>'
-						//
-						////user name
-						insta += '<div class="col-md-7 col-xs-7 instagram-username-div"'
-						insta += '<p class="instagram-username">'
-						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
-						insta += '</div>'
+							////user information and user name
+							insta += '<div class="col-md-2">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">'
+							insta += '<img width="40px" class="instagram-profilepictures" src="' + data.user.profile_picture + '">'
+							//new data
+							//insta += data.locations.location_id
+							insta += '</div>'
+							insta += '<div class="col-md-10">'
+							insta += '<p class="instagram-username">'
+							insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</a></p>'
+							//end new data
+							insta += '<br></a></div>'
+							//
 						//
 						////date
-						insta += '<div class="col-md-3 col-xs-3 col2insta instagram-date-div">'
-						insta += '<div class="clock"></div>'
+						insta += '<div class="instagram-date-div">'
 
 						insta += '</div>'
 						//
@@ -68,11 +69,10 @@ $(function() {
 
 						////likes and caption
 						insta += '<div class="instagram-caption-div">'
-						insta += '<div class="heart"></div>' + data.likes.count
-						insta += '<br><div class="chatbubble"></div>'
+						insta += '<div class="instagram-likes"><img class="heart" src="img/insta-heart.png" alt="instagram heart"><span class="likes-number">' + data.likes.count + '</span><span class="likes"> likes</span></div>'
 						insta += '<span class="instagram-username-caption">'
-						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>'
-						insta += '<div class="hashtags">' + data.caption.text + '</div>'
+						insta += '<a target="_blank" href="http://www.instagram.com/' + data.user.username + '">' + data.user.username + '</span></a>' + '<span class="hashtags">' + data.caption.text + '</span'
+						//insta += '<div class="hashtags">' + data.caption.text + '</div>'
 						insta += '</div>'
 						
 						////end of loop
