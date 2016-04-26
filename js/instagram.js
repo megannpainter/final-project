@@ -1,11 +1,6 @@
 // JavaScript Document
 
-
-//Use this url below to get your access token
-//https://instagram.com/oauth/authorize/?display=touch&client_id=1305ecaf399a47aa9941e7cfb970e8ae&redirect_uri=http://steventking.com/apps/instagram&response_type=token 
-
-//if you need a user id for yourself or someone else use:
-//http://jelled.com/instagram/lookup-user-id
+//help via:https://github.com/brmayes/j586/blob/master/project%20folders/project-four/twitter/instagram/instagram.js
 	
 						
 $(function() {

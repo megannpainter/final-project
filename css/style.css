@@ -60,6 +60,16 @@ h5 a:hover {
   color: #C7855E;
 }
 
+.down-arrow {
+    z-index: 80;
+    position: absolute;
+    height: 15%;
+    opacity: .7;
+    margin-left: 85%;
+    margin-top: 40%;
+    display: block;
+}
+
 /*------------HEADER----------- */
 #header {
   background-color: #5C0C12;
@@ -85,7 +95,6 @@ h5 a:hover {
 }
 
 #header a:hover {
-  /*color: #96331D;*/
   color: #C7855E;
   text-decoration: none;
   list-style-type: none;
@@ -102,11 +111,22 @@ h5 a:hover {
   margin: 0 auto;
 }
 
-#footer {
-  background-color: #5C0C12;
-  height: 40px;
+
+.menu-button {
+  background: none;
+  outline: none;
+  border: none;
 }
 
+.mobile-menu {
+  display: none;
+  visibility: hidden;
+}
+
+.hamburger {
+  display: none;
+  visibility: hidden;
+}
 
 
 /*------------GOOGLE MAPS----------- */
@@ -116,10 +136,27 @@ h5 a:hover {
   margin-bottom: 60px;
 }
 
+h1.infobox-heading {
+    font-weight: 700;
+    color: #5C0C12;
+}
+
+.google-pic {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.body-content h4 {
+  font-size: 10pt;
+  text-indent: 0;
+}
+
 
 /*------------INSTRAGRAM----------- */
 
-#instagram, #instagram-blm {
+#instagram {
   max-width: 400px;
   max-height: 450px;
   overflow-y: auto;
@@ -132,7 +169,7 @@ h5 a:hover {
   float: right;
 }
 
-#instagram, #instagram-blm, #twitter-blm{
+#instagram {
   margin-bottom: 25px;
 }
 
@@ -247,8 +284,6 @@ h5 a:hover {
   margin-right: auto;
   margin-left: auto;
   display: block;
-  
-  
 }
 
 .twitter-content {
@@ -296,7 +331,9 @@ img.twitter-profilepictures {
   max-width: 400px;
   margin: 0 auto;
   display: block;
+  padding:10px;
 }
+
 .twitter-header-pic {
   height: 28px;
   width: 30px;
@@ -322,6 +359,10 @@ img.twitter-profilepictures {
    
 /* Small devices (tablets, 768px and up) */
   @media screen and (max-width: 991px) {
+    .down-arrow {
+      display: none;
+      visibility: hidden;
+    }
     .instagram-content {
       margin-top: 60px;
     }
@@ -331,6 +372,74 @@ img.twitter-profilepictures {
     h3 {
     text-align: center;
     }
+  /*----------HAMBURGER MENU---------*/
+  /*----sourced via: http://codepen.io/g13nn/pen/eHGEF ------*/
+    #menu {
+      display: none;
+      visibility: hidden;
+    }
+    .mobile-menu {
+		display: inline-block;
+		float: right;
+		height: 30px;
+		width: 41px;
+		visibility: visible;
+        margin: 12px 0;
+	}
+	.hamburger{
+      display: inline-block;
+      background: none;
+      position: absolute;
+      right: 0;
+      line-height: 45px;
+      padding: 5px 25px;
+      color: #fff;
+      border: none;
+      font-size: 18pt;
+      cursor: pointer;
+      z-index: 100;
+      visibility: visible;
+    }
+    .cross{
+      background:none;
+      position:absolute;
+      top:0px;
+      right:0;
+      padding: 0 30px;
+      color:#fff;
+      border:0;
+      font-size:3em;
+      line-height:65px;
+      font-weight:bold;
+      cursor:pointer;
+      outline:none;
+      z-index:10000000000000;
+    }
+    .menu {
+      z-index: 100;
+      font-weight: bold;
+      font-size: 12pt;
+      width: 30%;
+      background: #5C0C12;
+      text-align: center;
+      float: right;
+      font-family: 'PT Sans Caption', sans-serif;
+    }
+    .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+    .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#5C050E 1px solid;}
+    .menu li:hover{display: block; padding:15px 0 15px 0; border-bottom:#5C050E 1px solid;}
+    .menu ul li a { text-decoration:none;  margin: 0px; color:#fff;}
+    .menu ul li a:hover {  color: #fff; text-decoration:none;}
+    .menu a{text-decoration:none; color:white;}
+    .menu a:hover{text-decoration:none; color:white;}
+    
+    .glyphicon-home{
+      color:white; 
+      font-size:1.5em; 
+      margin-top:5px; 
+      margin:0 auto;
+    }
+    
   }
   
                      
@@ -340,8 +449,96 @@ img.twitter-profilepictures {
       margin-top: 8%;
       font-size: 26pt;
     }
+    .menu {
+      width: 50%;
+    }
   }
   
-                  
+  
+/* Phones and dealing with social media sizes*/
+  @media screen and (max-width: 450px) {
+    .instagram-content {
+      max-width: 300px;
+      max-height: 337px;
+    }
+    #instagram {
+      max-width: 300px;
+    }
+    #twitter-iframe {
+      max-width: 300px;
+      max-height: 375px;
+    }
+    .twitter-header {
+      max-width: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    h2 {
+      font-size: 22pt;
+    }
+/*------INSTAGRAM MEDIA QUERIES------*/
+    .instagram-content {
+      max-width: 280px;
+      max-height: 315px;
+    }
+    #instagram {
+      max-width: 280px;
+    }
+    .instagram-image {
+      max-width: 280px !important;
+      margin: 0;
+    }
+    .instagram-caption {
+      margin: 0 ;
+    }
+    .instagram-profilepictures {
+      margin: 0;
+    }
+    .instagram-username a {
+      margin: 0;
+    }
+    .instagram-caption-div {
+      margin: 0;
+    }
+    .instagram-username-div {
+      margin-right: 0;
+    }
+    .instagram-username-caption a {
+      margin-right: 0;
+    }
+    .instagram-likes {
+      margin: 3px 0;
+    }
+    
+/*/*------TWITTER MEDIA QUERIES------*/
+    #twitter-iframe {
+      max-width: 280px;
+      margin: 0;
+      max-height: 315px;
+      overflow-x:hidden;
+      overflow-y: scroll;
+    }
+    .twitter-pic {
+      max-width: 270px;
+    }
+    .tweet {
+      margin-left: 12px;
+    }
+    .twitter-name {
+      margin-left: 15px;
+    }
+    .twitter-username {
+      margin-left: 15px;
+    }
+    .twitter-header {
+      max-width: 280px;
+    }
+    
+
+    
+  }
+  
+
 
 

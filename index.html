@@ -26,21 +26,34 @@
 <body>
 
     <div class="container fluid" id="header">
-        <div class="row">
-            <div class="col-md-2" id="menu"></div>
+        <div class="row" id="menu">
+            <div class="col-md-2"></div>
                 <div class="col-sm-2 header-text" id="click-home" ><h1><a data-scroll href="#home">Home</a></h1></div>
                 <div class="col-sm-2" id="click-info"><h1><a data-scroll href="#info">Information</a></h1></div>
                 <div class="col-sm-2" id-="click-social"><h1><a data-scroll href="#social">Social</a></h1></div>
                 <div class="col-sm-2" id="click-map"><h1><a data-scroll href="#map">Map</a></h1></div>
             <div class="col-md-2"></div>
         </div>
+        <div class="row" class="mobile-menu">
+            <button class="hamburger">&#9776;</button>
+            <button class="cross">&#735;</button>
+            <div class="menu">
+                <ul>
+                  <a data-scroll href="#home"><li>Home</li></a>
+                  <a data-scroll href="#info"><li>Information</li></a>
+                  <a data-scroll href="#social"><li>Social</li></a>
+                  <a data-scroll href="#map"><li>Map</li></a>
+                </ul>
+            </div> 
+        </div>
     </div>
     <div class="containter-fluid">
         <div class="row header-margin" id="home">
             <div class="col-md-12" >
                 <h2><span>The Grand Canyon</span></h2>
+                <span><a data-scroll href="#info"><img src="img/down-arrow-white.png" alt="down scroll" class="down-arrow"></a></span>
                 <img id="pic" src="img/gc-full.jpg" alt="grand canyon">
-                
+<!-- https://www.flickr.com/photos/aigle_dore/5853824587/in/photostream/-->
             </div>
         </div>
     </div>
@@ -65,7 +78,7 @@
                 <h5>All information sourced from the <a href="https://www.nps.gov/grca/index.htm">National Park Service</a>.</h5>
             </div>
         </div>
-        <div class="row header-margin" id="social"">
+        <div class="row header-margin" id="social">
             <!-------TWITTER------->
             <div class="col-md-6 col-sm-12">
                 <div class="twitter-content">
@@ -84,6 +97,11 @@
                     <div id="instagram"></div>
                 </div>
             </div>
+            <!-------TOGGLE------->
+            <!--<div class="col-xs-6" id="twitter-toggle">-->
+            <!--    -->
+            <!--</div>-->
+            <!--<div class="col"-->
         </div>
     </div>
     <div class="container-fluid">
@@ -91,16 +109,11 @@
             <!-------GOOGLE MAPS------->
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
-                <p>Map info</p>
+                <h5>Click the markers on the map to find out about more of the Grand Canyon&#8217s famous lookout spots and see the views.</h5>
+                <h5>All information sourced from the <a href="https://www.nps.gov/grca/index.htm">National Park Service</a>.</h5>
                 <div id="map"></div>
             </div>
             <div class="col-lg-1"></div>
-        </div>
-    </div>
-    <div class="containter-fluid">
-        <div class="row">
-            <div class="col-md-12" id="footer">
-            </div>
         </div>
     </div>
         
